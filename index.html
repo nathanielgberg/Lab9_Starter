@@ -102,6 +102,92 @@
 
     // Start your code here
     // You may move this JS to another file if you wish
+    // Console Log
+    errorBtns[0].addEventListener('click', () => {
+      console.log('This is a console log message.');
+    });
+
+    // Console Error
+    errorBtns[1].addEventListener('click', () => {
+      console.error('This is a console error message.');
+    });
+
+    // Console Count
+    let count = 0;
+    errorBtns[2].addEventListener('click', () => {
+      count++;
+      console.count('Button Clicked', count);
+    });
+
+    // Console Warn
+    errorBtns[3].addEventListener('click', () => {
+      console.warn('This is a console warning message.');
+    });
+
+    // Console Assert
+    errorBtns[4].addEventListener('click', () => {
+      console.assert(2 === 2, 'Assertion failed: 2 is not equal to 2');
+    });
+
+    // Console Clear
+    errorBtns[5].addEventListener('click', () => {
+      console.clear();
+    });
+
+    // Console Dir
+    errorBtns[6].addEventListener('click', () => {
+      const obj = { name: 'John', age: 30, city: 'New York' };
+      console.dir(obj);
+    });
+
+    // Console Dirxml
+    errorBtns[7].addEventListener('click', () => {
+      const xmlString = '<root><element>Some XML content</element></root>';
+      console.dirxml(xmlString);
+    });
+
+    // Console Group Start / Console Group End
+    errorBtns[8].addEventListener('click', () => {
+      console.group('Group');
+      console.log('Inside group');
+      console.groupEnd();
+    });
+
+    // Console Table
+    errorBtns[9].addEventListener('click', () => {
+      const tableData = [
+        { name: 'John', age: 30, city: 'New York' },
+        { name: 'Jane', age: 25, city: 'London' },
+        { name: 'Bob', age: 35, city: 'Paris' }
+      ];
+      console.table(tableData);
+    });
+
+    // Console Time / Console TimeEnd
+    let timerName = 'myTimer';
+    errorBtns[10].addEventListener('click', () => {
+      console.time(timerName);
+    });
+
+    errorBtns[11].addEventListener('click', () => {
+      console.timeEnd(timerName);
+    });
+
+    // Console Trace
+    errorBtns[12].addEventListener('click', () => {
+      function foo() {
+        console.trace('Trace');
+      }
+      function bar() {
+        foo();
+      }
+      bar();
+    });
+
+    // Trigger a Global Error
+    errorBtns[13].addEventListener('click', () => {
+      nonExistentFunction();
+    });
   </script>
 </body>
 
